@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Contact Me</title>
+  </head>
+  <body>
+    <h2>My Contact Details</h2>
+    <p>Mr Zakaria Meziane<br>21 cours du Danube
+    <br>Serris 77700 FRANCE</p>
+    <p>📧 z.meziane@yahoo.fr</p>
+    <p>☎ +33 (0)699191195</p>
+    <hr color="marroon"><br>
+<!--Below, it means that when clicking the submit button, the user will be taken to the index.html page: <form class="" action="index.html" method="post"-->
+<!--mailto opens the default mail client (on MacOS willbe Mail app, on Chrome will be Gmail, and it specifies the email address added after the colon ":", here z.meziane@yahoo.fr)
+And the method post means that the input within the form (see below) will be transfered into the mail client
+enctype(is text/plain) is the encoding type (like utf-8) and means that the data in our form will be encoded in plain text 
+-->     
+    <form class="" action="mailto:z.meziane@yahoo.fr" method="post" enctype="text/plain">
+<!--The HTML element "label" needs a closing tag, 
+The HTML element "input" is a self-closing tag
+Change the type attribut/OBJECT eg, to insert a color picker on the page,etc 
+cf developer.mozilla.org/en-US/docs/Web/HTML/Element/form-->      
+      <label>Your Name:</label>
+      <input type="text" name="yourName" value=""><br>
+      <label for="email">Your email: </label>
+      <input type="email" name="yourEmail" id="email" required><br>
+      <label>Your message</label><br>
+<!--The developer chooses the starting position of the textarea, eg 10x30 in this example, but the user will be able to modify it-->
+      <textarea name="name" rows="10" cols="30"></textarea><br>
+<!--the input type enables valiation, for instance the type email will enable the user to see an error message if the email he enters contain not the @ symbole or if it contains invalid characters like ""
+-->      
+      <input type="submit" name="" value="Submit">
+    </form>
+<!--the content of the attribute name= will be displayed in the mail client which will open when submitted the form. Eg, if I enter Zak in the box Your Name, the opened email will contain automatically "yourName=Zak"
+-->    
+   
+</html>
